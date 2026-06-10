@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col px-5 sm:px-10 overflow-hidden" id="hero">
       {/* 3D Robot Background */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-80 mix-blend-screen pointer-events-auto cursor-grab active:cursor-grabbing">
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing">
         <SplineScene 
           scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
           className="w-full h-full object-cover"
@@ -20,9 +20,9 @@ export function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full max-w-7xl mx-auto pt-24 pb-20 pointer-events-auto">
+      <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full max-w-7xl mx-auto pt-24 pb-20 pointer-events-none">
         <FadeIn delay={0.1} y={-20} className="mb-6 flex flex-col items-center">
-          <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-accent-blue/30 shadow-[0_0_30px_rgba(59,130,246,0.3)] mb-6">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-accent-blue/30 shadow-[0_0_30px_rgba(59,130,246,0.3)] mb-6 pointer-events-auto">
             <img src={studentData.profile.photo} alt={studentData.profile.name} className="w-full h-full object-cover" />
           </div>
           <div className="px-4 py-1.5 rounded-full border border-accent-blue/40 bg-accent-blue/10 text-accent-cyan text-xs sm:text-sm font-medium tracking-wide animate-pulse-glow text-center">
@@ -43,7 +43,7 @@ export function HeroSection() {
         </FadeIn>
         
         {/* CTA Buttons */}
-        <FadeIn delay={0.4} y={20} className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <FadeIn delay={0.4} y={20} className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center pointer-events-auto">
           <button 
             onClick={scrollToAchievements}
             className="flex items-center gap-2 bg-accent-blue hover:bg-accent-blue/90 text-white px-8 py-3.5 rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(59,130,246,0.4)]"
