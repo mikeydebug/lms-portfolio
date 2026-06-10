@@ -1,35 +1,40 @@
+import { Navbar } from './components/Navbar';
 import { HeroSection } from './sections/HeroSection';
-import { SkillsMarqueeSection } from './sections/SkillsMarqueeSection';
 import { AboutSection } from './sections/AboutSection';
-import { TopSkillsSection } from './sections/TopSkillsSection';
-import { ExperienceSection } from './sections/ExperienceSection';
-import { StackSection } from './sections/StackSection';
+import { AcademicsSection } from './sections/AcademicsSection';
+import { ClubsSection } from './sections/ClubsSection';
+import { AchievementsSection } from './sections/AchievementsSection';
 import { ProjectsSection } from './sections/ProjectsSection';
+import { CertificatesSection } from './sections/CertificatesSection';
+import { SkillsSection } from './sections/SkillsSection';
+import { BlogSection } from './sections/BlogSection';
 import { TestimonialsSection } from './sections/TestimonialsSection';
-import { CinematicFooter } from './components/ui/motion-footer';
+import { ContactSection } from './sections/ContactSection';
 
 function App() {
   return (
-    <div className="bg-[#0c0c0c] min-h-screen text-white font-sans selection:bg-accent-blue/30 selection:text-white">
+    <div className="bg-white dark:bg-dark-base min-h-screen text-gray-900 dark:text-white font-sans selection:bg-accent-blue/30 selection:text-white transition-colors duration-300">
+      <Navbar />
+      
       {/* 
         MAIN CONTENT AREA 
         We use a high z-index and minimum height to allow the user 
         to scroll down and reveal the footer securely underneath.
       */}
-      <main className="relative z-10 w-full bg-dark-base border-b border-dark-border/50 shadow-2xl rounded-b-[40px] md:rounded-b-[60px] pb-10">
+      <main className="relative z-10 w-full bg-white dark:bg-dark-base border-b border-gray-200 dark:border-dark-border/50 shadow-2xl rounded-b-[40px] md:rounded-b-[60px]">
         <HeroSection />
-        <SkillsMarqueeSection />
         <AboutSection />
-        <TopSkillsSection />
-        <ExperienceSection />
-        <StackSection />
+        <AcademicsSection />
+        <ClubsSection />
+        <AchievementsSection />
         <ProjectsSection />
+        <CertificatesSection />
+        <SkillsSection />
+        <BlogSection />
         <TestimonialsSection />
       </main>
 
-      <div id="contact">
-        <CinematicFooter />
-      </div>
+      <ContactSection />
     </div>
   );
 }
