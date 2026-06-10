@@ -9,8 +9,7 @@
     padding: 0;
   }
   html, body, #root {
-    background-color: #0C0C0C;
-    color: #FFFFFF;
+    @apply bg-white text-gray-900 dark:bg-dark-base dark:text-white;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

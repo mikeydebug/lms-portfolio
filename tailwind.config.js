@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         dark: {
-          base: '#0C0C0C',
+          base: '#0a0f1e',
           card: '#0F172A',
           terminal: '#060B14',
           border: '#1E293B',
