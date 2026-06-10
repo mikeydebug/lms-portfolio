@@ -1,6 +1,6 @@
 import { FadeIn } from '../components/FadeIn';
 import { studentData } from '../data/student';
-import { ExternalLink, Github, Code2, Cpu, Globe } from 'lucide-react';
+import { ExternalLink, Code2, Cpu, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const getProjectIcon = (type: string) => {
